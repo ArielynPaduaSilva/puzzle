@@ -126,10 +126,7 @@ public class Frame extends JFrame  implements Runnable, KeyListener{
 		 	
 		icon0=new ImageIcon();
 		
-		iconLeft=new ImageIcon(getClass().getResource("/mainFrame/pictures/others/VerticalLineLeft.jpg"));
-			iconRight=new ImageIcon(getClass().getResource("/mainFrame/pictures/others/VerticalLineRight.jpg"));
-			iconUp=new ImageIcon(getClass().getResource("/mainFrame/pictures/others/HorizontalLineUp.jpg"));
-			iconDown=new ImageIcon(getClass().getResource("/mainFrame/pictures/others/HorizontalLineDown.jpg"));
+		getIconsArrows();
 			
 		//*Thread*//
         thread = new Thread(this);
@@ -361,6 +358,14 @@ public class Frame extends JFrame  implements Runnable, KeyListener{
         add(jLabelMain);
         addKeyListener(this); 
     }
+
+
+	private void getIconsArrows() {
+		iconLeft=new ImageIcon(getClass().getResource("/mainFrame/pictures/others/VerticalLineLeft.jpg"));
+			iconRight=new ImageIcon(getClass().getResource("/mainFrame/pictures/others/VerticalLineRight.jpg"));
+			iconUp=new ImageIcon(getClass().getResource("/mainFrame/pictures/others/HorizontalLineUp.jpg"));
+			iconDown=new ImageIcon(getClass().getResource("/mainFrame/pictures/others/HorizontalLineDown.jpg"));
+	}
     
     
     //**
