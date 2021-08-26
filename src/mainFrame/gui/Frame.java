@@ -647,6 +647,22 @@ public class Frame extends JFrame  implements Runnable, KeyListener{
   	}
   	
   	
+  	public boolean selectedLabelKey39(JLabel jLabelTemp ) {
+  		return (jLabelTemp==jLabelPicPart[0][0] || jLabelTemp==jLabelPicPart[1][0] || jLabelTemp==jLabelPicPart[2][0] || jLabelTemp==jLabelPicPart[3][0] || jLabelTemp==jLabelPicPart[4][0]);
+  	}
+  	
+  	public boolean selectedLabelKey37(JLabel jLabelTemp ) {
+  		return (jLabelTemp==jLabelPicPart[0][3] || jLabelTemp==jLabelPicPart[1][3] || jLabelTemp==jLabelPicPart[2][3] || jLabelTemp==jLabelPicPart[3][3] || jLabelTemp==jLabelPicPart[4][3]);
+  	}
+  	
+  	public boolean selectedLabelKey38(JLabel jLabelTemp ) {
+  		return (jLabelTemp==jLabelPicPart[4][0] || jLabelTemp==jLabelPicPart[4][1] || jLabelTemp==jLabelPicPart[4][2] || jLabelTemp==jLabelPicPart[4][3]);
+  	}
+  	
+  	public boolean selectedLabelKey40(JLabel jLabelTemp ) {
+  		return (jLabelTemp==jLabelPicPart[0][0] || jLabelTemp==jLabelPicPart[0][1] || jLabelTemp==jLabelPicPart[0][2] || jLabelTemp==jLabelPicPart[0][3]);
+  	}
+  	
   	/**
 	 * Takes a <code>jLabelTemp</code> & an <code>int</code>(pressed arrow key) and returns the neighboring label.
 	 * @param jLabelTemp label containing empty pic-part
@@ -657,9 +673,7 @@ public class Frame extends JFrame  implements Runnable, KeyListener{
   		JLabel selectedLabel=jLabelTemp;
   		
   		if(key==39){			/////right/////
-  			if(jLabelTemp==jLabelPicPart[0][0] || jLabelTemp==jLabelPicPart[1][0] || jLabelTemp==jLabelPicPart[2][0] || 
-  					jLabelTemp==jLabelPicPart[3][0] || jLabelTemp==jLabelPicPart[4][0]){
-  				
+  			if(selectedLabelKey39(jLabelTemp)){
   				selectedLabel=jLabelTemp;
   			}
   			else{
@@ -674,9 +688,7 @@ public class Frame extends JFrame  implements Runnable, KeyListener{
   			}
   		}
   		else if(key==37){			/////left/////
-  			if(jLabelTemp==jLabelPicPart[0][3] || jLabelTemp==jLabelPicPart[1][3] || jLabelTemp==jLabelPicPart[2][3] || 
-  					jLabelTemp==jLabelPicPart[3][3] || jLabelTemp==jLabelPicPart[4][3]){
-  				
+  			if(selectedLabelKey37(jLabelTemp)){
   				selectedLabel=jLabelTemp;
   			}
   			else{
@@ -691,9 +703,7 @@ public class Frame extends JFrame  implements Runnable, KeyListener{
   			}
   		}
   		else if(key==38){			/////up/////
-  			if(jLabelTemp==jLabelPicPart[4][0] || jLabelTemp==jLabelPicPart[4][1] || jLabelTemp==jLabelPicPart[4][2] || 
-  					jLabelTemp==jLabelPicPart[4][3]){
-  				
+  			if(selectedLabelKey38(jLabelTemp)){
   				selectedLabel=jLabelTemp;
   			}
   			else{
@@ -708,9 +718,7 @@ public class Frame extends JFrame  implements Runnable, KeyListener{
   			}
   		}
   		else if(key==40){		/////down/////
-  			if(jLabelTemp==jLabelPicPart[0][0] || jLabelTemp==jLabelPicPart[0][1] || jLabelTemp==jLabelPicPart[0][2] || 
-  					jLabelTemp==jLabelPicPart[0][3]){
-  				
+  			if(selectedLabelKey40(jLabelTemp)){
   				selectedLabel=jLabelTemp;
   			}
   			else{
